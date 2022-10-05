@@ -3,8 +3,7 @@ import Movie from 'components/Movie/Movie';
 import { Box } from 'components/services/Box';
 
 export default function MovieList({ movies }) {
-    
-    console.log(movies)
+  
 
 
 

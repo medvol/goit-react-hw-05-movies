@@ -7,7 +7,7 @@ export default function Movie({movie }) {
     const { poster_path, title, vote_average, release_date, id } = movie;
     const imageURL = 'https://image.tmdb.org/t/p/w500'
   return (
-      <Box displa>
+      <Box >
           <Link to={`/movies/${id}`}>
               <img src={`${imageURL}${poster_path}`} alt={title} />
               <p>{title}</p>

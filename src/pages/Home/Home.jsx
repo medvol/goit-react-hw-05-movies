@@ -13,8 +13,7 @@ export default function Home() {
             try {
                 setIsLoad(true);
                 setError(null);
-                const movies = await getTrendingMovies();
-                console.log(movies);
+                const movies = await getTrendingMovies();               
                 setMovies(prev=> [...movies]);
                 
             } catch (error) {

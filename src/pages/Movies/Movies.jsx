@@ -11,13 +11,15 @@ export default function Movies() {
   const [error, setError] = useState(null);
   const [isLoad, setIsLoad] = useState(false);
 
-     useEffect(() => {
+
+
+  useEffect(() => {
+         if (!query) return
      const fetchMovies = async () => {
             try {
                 setIsLoad(true);
                 setError(null);
-                const movies = await searchMovies(query);
-                console.log(movies);
+                const movies = await searchMovies(query);               
                 setMovies(prev=> [...movies]);
                 
             } catch (error) {
@@ -30,10 +32,8 @@ export default function Movies() {
         fetchMovies();
      }, [query])
   
-  const onChangeInput = (event) => {
-   console.log(event.target.value);
-    setQuery(event.target.value);
-    
+  const onChangeInput = (event) => {  
+    setQuery(event.target.value.trim());    
   }
 
 
