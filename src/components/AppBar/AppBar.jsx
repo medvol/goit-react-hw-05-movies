@@ -4,7 +4,7 @@ import { Box } from 'components/services/Box';
 import { NavLink } from 'react-router-dom';
 
 const navItems = [
-    { href: 'home', text: 'Home', icon: '' },
+    { href: '/', text: 'Home', icon: '' },
     {href:'movies', text:'Movies', icon:''},
 ]
 
