@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { getTrendingMovies } from 'components/services/api';
 import MovieList from 'components/MovieList/MovieList';
+import { Loader } from 'components/Loader/Loader';
 
 export default function Home() {
     const [movies, setMovies] = useState([])
@@ -17,7 +18,7 @@ export default function Home() {
                 setMovies(prev=> [...movies]);
                 
             } catch (error) {
-                setError(error)
+                setError(error);
                 
             }
             finally{setIsLoad(false)}
@@ -30,8 +31,12 @@ export default function Home() {
 
 
   return (
-      <>
-          <MovieList movies={movies } />
-      </>
+      <main>
+         
+                <MovieList movies={movies} />
+                {isLoad && <Loader />}
+                {error && <p>Something went wrong</p>}
+                
+      </main>
   )
 }
