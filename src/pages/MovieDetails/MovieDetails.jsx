@@ -12,9 +12,7 @@ export default function MovieDetails() {
     const { movieId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from || '/movies';
-    console.log('location on DetailsPage',location)
-    console.log(from)
+    const from = location.state?.from || '/movies';   
  
     useEffect(() => {
      const fetchMovies = async () => {

@@ -3,9 +3,10 @@ export const theme = {
     black: '#000',
     white: '#fff',
     text: '#2a2a2a',
-    background: '#3f51b5',
+    background: '#444857',
     primary: '#07c',
     secondary: '#05a',
+    third: '#3f51b5',
     accent: '#303f9f',
     modal: 'rgba(0, 0, 0, 0.8)',
   },
@@ -24,7 +25,7 @@ export const theme = {
   },
   fontWeights: {
     normal: 400,
-    semibold:500,
+    semibold: 500,
     bold: 700,
   },
   lineHeights: {
@@ -37,14 +38,14 @@ export const theme = {
   },
   radii: {
     none: '0',
-    normal: '2px',
+    normal: '8px',
     round: '50%',
-    },
+  },
   shadows: {
     card: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
   },
   zIndices: {
     search: 1100,
     modal: 1200,
-  }
+  },
 };
