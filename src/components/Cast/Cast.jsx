@@ -21,6 +21,7 @@ export default function Cast() {
         gridTemplateColumns="repeat(6, 1fr)"
         gridColumnGap={4}
         gridRowGap={4}
+        mt={5}
       >
         {actors &&
           actors.map(({ name, character, profile_path, id }) => {

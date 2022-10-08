@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import posterBackground from '../services/posterBackground.jpg';
 import {
@@ -34,3 +35,15 @@ export default function Movie({ movie, location, lastElementRef }) {
     </MovieItem>
   );
 }
+
+Movie.propTypes = {
+  location: PropTypes.object,
+  lastElementRef: PropTypes.func,
+  movie: PropTypes.shape({
+    poster_path: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    vote_average: PropTypes.number,
+    release_date: PropTypes.string,
+    id: PropTypes.number.isRequired,
+  }),
+};

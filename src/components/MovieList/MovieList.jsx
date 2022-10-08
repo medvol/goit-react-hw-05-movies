@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Movie from 'components/Movie/Movie';
 import { Box } from 'components/services/Box';
 import { useLocation } from 'react-router-dom';
@@ -10,7 +11,7 @@ export default function MovieList({ movies, lastElementRef }) {
     <Box
       display="grid"
       as="ul"
-      gridTemplateColumns="repeat(5, 1fr)"      
+      gridTemplateColumns="repeat(5, 1fr)"
       gridColumnGap={4}
       gridRowGap={4}
     >
@@ -38,3 +39,15 @@ export default function MovieList({ movies, lastElementRef }) {
   );
 }
 
+MovieList.propTypes = {
+  lastElementRef: PropTypes.func,
+  movie: PropTypes.arrayOf(
+    PropTypes.shape({
+      poster_path: PropTypes.string,
+      title: PropTypes.string.isRequired,
+      vote_average: PropTypes.number,
+      release_date: PropTypes.string,
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};
