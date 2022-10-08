@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 
 export default function Layout() {
   return (
-      <Box display='grid' gridTemplateColumns='200px 1fr'>
+      <Box display='grid' gridTemplateColumns='250px 1fr'>
           <AppBar />
           <Outlet/>
       </Box>

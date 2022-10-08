@@ -4,6 +4,7 @@ import MovieList from 'components/MovieList/MovieList';
 import { Loader } from 'components/Loader/Loader';
 import { useSearchParams } from 'react-router-dom';
 import useSearchMovies from 'components/services/useSearchMovies';
+import { MovieSearch } from './Movies.styled';
 
 export default function Movies() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -38,18 +39,15 @@ export default function Movies() {
   };
 
   return (
-    <Box as="main" display="flex" flexDirection="column">
+    <Box as="main" display="flex" flexDirection="column" p={5}>
       <Box as="header">
-        <form>
-          <input
-            type="text"
-            name="query"
-            value={query}
-            placeholder="Search for Movies"
-            onChange={onChangeInput}
-          />
-          <button type="submit">Search</button>
-        </form>
+        <MovieSearch
+          type="text"
+          name="query"
+          value={query}
+          placeholder="Search for Movies"
+          onChange={onChangeInput}
+        />
       </Box>
       <Box as="section">
         {movies && (

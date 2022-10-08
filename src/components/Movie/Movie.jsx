@@ -18,7 +18,7 @@ export default function Movie({movie,location, lastElementRef  }) {
   const imageURL = 'https://image.tmdb.org/t/p/w500';
  
   return (
-    <MovieItem  ref={lastElementRef} >
+    <MovieItem ref={lastElementRef}>
       <Link state={{ from: location }} to={`/movies/${id}`}>
         <ImageWrapper>
           {poster_path && (
@@ -27,9 +27,9 @@ export default function Movie({movie,location, lastElementRef  }) {
           {!poster_path && <Image src={posterBackground} alt={title} />}
         </ImageWrapper>
 
-        <MovieDescription >
-          <ReleaseDate>year: {release_date.slice(0, 4)}</ReleaseDate>
-          <Rating>rating: {vote_average.toFixed(1)}</Rating>
+        <MovieDescription>
+          <ReleaseDate>year: {release_date.slice(0, 4) || '-'}</ReleaseDate>
+          <Rating>rating: {vote_average.toFixed(1) || '-'}</Rating>
           <MovieTitle>{title}</MovieTitle>
         </MovieDescription>
       </Link>

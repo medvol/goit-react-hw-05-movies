@@ -5,7 +5,7 @@ export const MovieItem = styled.li`
   height: 100%;
   overflow: hidden;
   border-radius: ${p => p.theme.radii.normal};
-  background-color: ${p => p.theme.colors.background};
+  background-color: ${p => p.theme.colors.secondary};
 `;
 
 export const MovieLink = styled(Link)`
@@ -17,6 +17,7 @@ export const MovieLink = styled(Link)`
 export const ImageWrapper = styled.div`
   object-fit: cover;
   overflow: hidden;
+  
 `;
 
 export const Image = styled.img`
@@ -29,7 +30,7 @@ export const Image = styled.img`
 `;
 
 export const MovieDescription = styled.div`
-  background-color: ${p => p.theme.colors.background};
+  background-color: ${p => p.theme.colors.secondary};
   padding: ${p => p.theme.space[4]}px;
 `;
 

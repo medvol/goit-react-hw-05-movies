@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #10141f;
 }
 
 code {
@@ -20,15 +21,21 @@ img {
   width: 100%;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-p {
+p,
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
 }
