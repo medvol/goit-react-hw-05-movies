@@ -10,4 +10,6 @@ export const MovieSearch = styled.input`
   outline: none;
   border: none;
   min-height: ${p => p.theme.space[5]}px;
+  border-radius: ${p => p.theme.radii.normal};
+  padding-left: ${p => p.theme.space[4]}px;
 `;

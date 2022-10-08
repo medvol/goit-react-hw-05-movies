@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box } from 'components/services/Box';
 import posterBackground from '../services/posterBackground.jpg';
 import {
   Image,
@@ -12,11 +11,10 @@ import {
   MovieItem,
 } from './Movie.styled';
 
-
-export default function Movie({movie,location, lastElementRef  }) {
+export default function Movie({ movie, location, lastElementRef }) {
   const { poster_path, title, vote_average, release_date, id } = movie;
   const imageURL = 'https://image.tmdb.org/t/p/w500';
- 
+
   return (
     <MovieItem ref={lastElementRef}>
       <Link state={{ from: location }} to={`/movies/${id}`}>

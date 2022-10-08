@@ -10,8 +10,7 @@ export default function MovieList({ movies, lastElementRef }) {
     <Box
       display="grid"
       as="ul"
-      gridTemplateColumns="repeat(5, 1fr)"
-      
+      gridTemplateColumns="repeat(5, 1fr)"      
       gridColumnGap={4}
       gridRowGap={4}
     >
@@ -22,11 +21,17 @@ export default function MovieList({ movies, lastElementRef }) {
               lastElementRef={lastElementRef}
               location={location}
               movie={movie}
-              key={movie.id}
+              key={movie.id.toString()}
             />
           );
         } else {
-          return <Movie location={location} movie={movie} key={movie.id} />;
+          return (
+            <Movie
+              location={location}
+              movie={movie}
+              key={movie.id.toString()}
+            />
+          );
         }
       })}
     </Box>

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Link,
-  Outlet,
-  useLocation,
-  useNavigate,
-  useParams,
-} from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getMovieDetails } from 'components/services/api';
 import { Loader } from 'components/Loader/Loader';
@@ -64,9 +58,10 @@ export default function MovieDetails() {
 
   return (
     <Box as="main" p={5} pt={4} pr={8}>
-          <GoBackButton onClick={() => navigate(from)}>
-              <IoChevronBackCircleSharp size={ 18} />
-              Go back</GoBackButton>
+      <GoBackButton onClick={() => navigate(from)}>
+        <IoChevronBackCircleSharp size={18} />
+        Go back
+      </GoBackButton>
       {movie && (
         <section>
           <Box
@@ -85,7 +80,9 @@ export default function MovieDetails() {
             </ImageWrapper>
             <Box color="white" p={5} fontSize="m">
               <MovieTitle>Title: {title}</MovieTitle>
-              <MovieTitle>Release year: {release_date.slice(0, 4) || '-'}</MovieTitle>
+              <MovieTitle>
+                Release year: {release_date.slice(0, 4) || '-'}
+              </MovieTitle>
               <MovieTitle>Rating: {vote_average.toFixed(1) || '-'}</MovieTitle>
               <MovieOverview>{overview}</MovieOverview>
             </Box>
